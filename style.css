@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #333, #111);
+}
+
+.footer {
+	font-size: 0.6em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+	text-decoration: none;
+}
+
+.muted {
+	font-size: 2em;
+	color: rgb(179, 179, 179);
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: white;
+	font-size: 5em;
+}
+
+.sticky-top {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.button {
+  position: fixed;
+	top: calc(100% - 6em);
+  padding: 1.6em 2.8em;
+  text-decoration: none;
+	background-color: rgb(247, 90, 213);
+}
+.above-button {
+	position: fixed;
+	top: calc(100% - 12em);
+  padding: 1.6em 2.8em;
+  text-decoration: none;
+	background-color: rgb(247, 90, 213);
+}
+.button__canvas {
+  --offset: 32px;
+  position: absolute;
+  top: calc(var(--offset) * -1);
+  left: calc(var(--offset) * -1);
+  width: calc(100% + var(--offset) * 2);
+  height: calc(100% + var(--offset) * 2);
+  transition: opacity 2s ease;
+}
+.button__text {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+.button:hover .button__canvas {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.button:active .button__canvas {
+  opacity: 1;
+  transition: none;
+}
