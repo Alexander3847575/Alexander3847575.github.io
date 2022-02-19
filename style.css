@@ -1,0 +1,120 @@
+html, body {
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  margin: 0;
+  overflow-y: hidden;
+  background-color: #1D1D1D;
+
+  --main-bg-color: #1d1d1d;
+  --secondary-bg-color: #3a3a3a;
+  --item-bg-color: #333333;
+  
+  --main-outline-color: #252525;
+  --secondary-outline-color: #2d2d2d;
+  
+  --main-selection-color: #ffd700;
+  --secondary-selection-color: #888;
+  
+  --main-text-color: #ddd;
+}
+
+.topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  overflow: hidden;
+  margin: 0%;
+  height: 50px;
+  box-shadow: 0px 0px 10px #000;
+}
+  
+.topnav span {
+  color: var(--main-text-color);
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  height: 50px;
+  padding: 0 15px;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.bottomnav {
+  scroll-snap-align: center;
+  top: 0;
+  width: 100%;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  overflow: hidden;
+  margin: 0%;
+  height: 50px;
+  box-shadow: 0px 0px 10px #000;
+}
+  
+.bottomnav span {
+  color: var(--main-text-color);
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  height: 50px;
+  padding: 0 15px;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+::-webkit-scrollbar {
+	width: 10px
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--main-bg-color)
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--secondary-bg-color);
+	border-radius: 1rem
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--item-bg-color)
+}
+
+.content {
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+  text-align: center;
+  overflow: auto;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.panel {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 5rem;
+  padding: 0.5rem;
+  height: 80vh;
+  border: 1rem solid #259;
+  scroll-snap-align: center;
+}
+
+.panel-text {
+  font-size: 1.2rem;
+  max-width: 60%;
+  color: var(--main-text-color);
+}
+
+.panel-text a {
+    color: var(--main-text-color);
+}
+
+.panel-display {
+    margin: 0 5rem;
+    height: 20rem;
+}
