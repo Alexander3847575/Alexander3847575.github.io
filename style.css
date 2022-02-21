@@ -25,12 +25,13 @@ html, body {
   background-color: var(--secondary-bg-color);
   text-align: center;
   overflow: hidden;
+  float: left;
   margin: 0%;
   height: 50px;
   box-shadow: 0px 0px 10px #000;
 }
   
-.topnav span {
+.topnav a {
   color: var(--main-text-color);
   background-color: var(--secondary-bg-color);
   text-align: center;
