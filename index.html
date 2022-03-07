@@ -9,36 +9,68 @@
 </head>
 <body>
   <div class="topnav">
-    <a class="logo" href="#graph">Graph</a>
     <a class="logo" href="#table">Table</a>
-    <a class="logo" href="#cheese">Cheese</a>
+    <a class="logo" href="#graph">Graph</a>
+    <a class="logo" href="#prediction">Prediction</a>
   </div>
   <div class="content">
+    <div class="panel" id="table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>X: Year</th><th>Y: MW</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr><td>1982</td><td>7.0</td></tr>
+         <tr><td>1983</td><td>13.0</td></tr>
+         <tr><td>1984</td><td>10.0</td></tr>
+         <tr><td>1985</td><td>6.0</td></tr>
+         <tr><td>1986</td><td>6.6</td></tr>
+         <tr><td>1987</td><td>6.9</td></tr>
+         <tr><td>1988</td><td>10.0</td></tr>
+         <tr><td>1989</td><td>13.0</td></tr>
+         <tr><td>1990</td><td>13.8</td></tr>
+         <tr><td>1991</td><td>14.9</td></tr>
+         <tr><td>1992</td><td>15.6</td></tr>
+         <tr><td>1993</td><td>21.0</td></tr>
+         <tr><td>1994</td><td>26.1</td></tr>
+         <tr><td>1995</td><td>31.1</td></tr>
+         <tr><td>1996</td><td>35.5</td></tr>
+         <tr><td>1997</td><td>46.4</td></tr>
+         <tr><td>1998</td><td>50.6</td></tr>
+         <tr><td>1999</td><td>76.9</td></tr>
+        </tbody>
+      </table>
+      <div class="panel-text">
+        <h2>Total Yearly US shipments of Photovoltaic Cells and Modules</h2>
+        <span>This table shows the exponential growth of solar cell shipments and modules over the past 40 years. The X values represent the years, ranging from 1982 to 1999. The Y values represent the combined amount of all the cells and modules within the shipments in Mega Watts.</span>
+      </div>
+      <img src="/images/Solar-Panel.png" style="width: 25%">
+    </div>
     <div class="panel" id="graph">
       <div class="panel-text">
-        <h1>Total Yearly US shipments of photovoltaic cells and modules</h1>
-        <span>The Graph to the right shows...</span>
+        <h2>The Equation</h2>
+        <span>By importing the above table into desmos, we can create a function to match the data. Desmos found the values needed and we were able to produce an equation with them:</span><br>
+        <span style="font-size: 2rem; font-style: italic;">y = 0.6(1.32)<sup>(x - 1982)</sup> + 7.4</span><br>
+        <span>The 1982 represents the starting year of the data, so it is substracted from X. The multiplier affects how much the MegaWatts increase per year. This implies that more solar panels are being shipped and they are getting more effective with the increase of peak power output.</span>
+        <!--<h:math>y_{1}\sim ab^{\left(x_{1}-1982\right)}+c</h:math>-->
       </div>
       <div class="graph">
-    <iframe src="https://www.desmos.com/calculator/ad6ygediun?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <span class="label-left">Peak Capacity in Megawatts</span>
+        <iframe src="https://www.desmos.com/calculator/ad6ygediun?embed" width="500" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+        <span class="label-bottom">Year</span>
       </div>
     </div>
-    <div class="panel" id="table">
+    <div class="panel" id="prediction">
       <div class="panel-text">
-        <h1>Total Yearly US shipments of photovoltaic cells and modules</h1>
-        <span>The Graph to the right shows...</span>
+        <h2>What will the number be in 2025?</h2>
+        <span>We predict that in 2025...</span>
       </div>
     </div>
-    <div class="panel" id="cheese">
-      <div class="panel-text">
-        <h1>Total Yearly US shipments of photovoltaic cells and modules</h1>
-        <span>The Graph to the right shows...</span>
-      </div>
-      <img src="/cheese.jfif">
-    </div>
-    <div class="bottomnav">
+    <!--<div class="bottomnav">
       <span>hi</span>
-    </div>
+    </div>-->
   </div>
 </body>
 </html>

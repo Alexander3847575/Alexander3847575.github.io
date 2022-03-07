@@ -70,7 +70,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--main-bg-color)
+	background-color: var(--main-outline-color)
 }
 
 ::-webkit-scrollbar-thumb {
@@ -89,6 +89,7 @@ html, body {
   overflow: auto;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .panel {
@@ -106,9 +107,10 @@ html, body {
 }
 
 .panel-text {
-  font-size: 1.2rem;
-  max-width: 60%;
+  font-size: 1.4rem;
+  max-width: 50%;
   color: var(--main-text-color);
+  margin: 2rem;
 }
 
 .panel-text a {
@@ -118,4 +120,46 @@ html, body {
 .panel-display {
     margin: 0 5rem;
     height: 20rem;
+}
+
+.graph {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 5px;
+  grid-template-rows: min-content min-content;
+  background-calor: var(--item-bg-color);
+  color: var(--main-text-color);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin: 0 1rem;
+}
+
+.graph .label-left {
+  writing-mode: vertical-rl;
+  transform: scale(-1, -1);
+  -moz-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+}
+
+.graph .label-bottom {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.table {
+  color: var(--main-text-color);
+  font-size: 1.2rem;
+  border-spacing: 0.2rem;
+}
+
+.table th {
+  background-color: var(--secondary-bg-color);
+  padding: 0.5rem;
+}
+
+.table td {
+  background-color: var(--item-bg-color);
+  font-style: italic;
 }
